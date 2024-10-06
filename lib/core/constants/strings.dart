@@ -1,0 +1,4 @@
+class Strings {
+  static const String aboutMe =
+      "Hi, I am a Flutter developer with 3+ years of experience crafting high-quality, cross-platform mobile apps for Android and iOS. Proficient in Dart, state management (Bloc, Provider, GetX), API integration, and creating intuitive UI/UX designs. Known for writing clean, efficient code and collaborating effectively with teams to deliver user-focused solutions. Passionate about utilizing cutting-edge technologies to build seamless, visually engaging mobile experiences. I also have hands-on experience in backend development, specifically in building RESTful APIs using NodeJS and MongoDB. My expertise involves designing and implementing scalable server-side applications, managing databases, and ensuring efficient data flow between the backend and mobile apps.";
+}
