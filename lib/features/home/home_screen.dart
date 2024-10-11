@@ -148,7 +148,9 @@ class _HomeScreenState extends State<HomeScreen>
                         ),
                       ), // Assign key to section
                       // LinksScreen(key: _linksKey),
-                      const DesktopExperience(),
+                      DesktopExperience(
+                        key: _experienceKey,
+                      ),
                       const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 40.0),
                         child: Divider(
