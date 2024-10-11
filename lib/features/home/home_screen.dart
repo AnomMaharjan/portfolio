@@ -80,105 +80,104 @@ class _HomeScreenState extends State<HomeScreen>
 
   @override
   Widget build(BuildContext context) {
-    return
-        // return firstLoad
-        //     ? Scaffold(
-        //         backgroundColor: const Color.fromARGB(255, 29, 36, 41),
-        //         body: Center(
-        //           child: Column(
-        //             mainAxisAlignment: MainAxisAlignment.center,
-        //             crossAxisAlignment: CrossAxisAlignment.center,
-        //             children: [
-        //               SizedBox(
-        //                 height: 100,
-        //                 width: 100,
-        //                 child: Transform.scale(
-        //                   scale: 2,
-        //                   child: const CircularProgressIndicator.adaptive(),
-        //                 ),
-        //               ),
-        //               Text('Loading Portfolio',
-        //                   style: GoogleFonts.bebasNeue(
-        //                     fontSize: 60,
-        //                     fontWeight: FontWeight.w100,
-        //                     height: 1,
-        //                     color: Colors.white,
-        //                   ))
-        //             ],
-        //           ),
-        //         ))
-        //     :
-        FadeTransition(
-      opacity: _animation,
-      child: Scaffold(
-        key: _scaffoldKey,
-        backgroundColor: const Color.fromARGB(255, 29, 36, 41),
-        appBar: ResponsiveAppBar(
-          desktop: DesktopAppbar(
-            landingKey: _landingKey,
-            aboutKey: _aboutKey,
-            worksKey: _worksKey,
-            experienceKey: _experienceKey,
-          ),
-          mobile: MobileAppbar(
-            scaffoldKey: _scaffoldKey,
-          ),
-          tablet: const TabletAppbar(),
-        ),
-        endDrawer:
-            ResponsiveAppBar.isMobile(context) ? const CustomDrawer() : null,
-        body: SingleChildScrollView(
-          controller: _scrollController,
-          child: Responsive(
-            mobile: const Column(children: [MobileAboutScreen()]),
-            tablet: Container(),
-            desktop: Column(
-              children: [
-                DesktopLandingScreen(key: _landingKey),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Divider(
-                    thickness: 0.5,
+    return firstLoad
+        ? Scaffold(
+            backgroundColor: const Color.fromARGB(255, 29, 36, 41),
+            body: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    height: 100,
+                    width: 100,
+                    child: Transform.scale(
+                      scale: 2,
+                      child: const CircularProgressIndicator.adaptive(),
+                    ),
                   ),
-                ), // Assign key to section
-                DesktopAboutScreen(key: _aboutKey),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Divider(
-                    thickness: 0.5,
-                  ),
-                ), // Assign key to section
-                // LinksScreen(key: _linksKey),
-                const DesktopExperience(),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Divider(
-                    thickness: 0.5,
+                  Text('Loading Portfolio',
+                      style: GoogleFonts.bebasNeue(
+                        fontSize: 60,
+                        fontWeight: FontWeight.w100,
+                        height: 1,
+                        color: Colors.white,
+                      ))
+                ],
+              ),
+            ))
+        : FadeTransition(
+            opacity: _animation,
+            child: Scaffold(
+              key: _scaffoldKey,
+              backgroundColor: const Color.fromARGB(255, 29, 36, 41),
+              appBar: ResponsiveAppBar(
+                desktop: DesktopAppbar(
+                  landingKey: _landingKey,
+                  aboutKey: _aboutKey,
+                  worksKey: _worksKey,
+                  experienceKey: _experienceKey,
+                ),
+                mobile: MobileAppbar(
+                  scaffoldKey: _scaffoldKey,
+                ),
+                tablet: const TabletAppbar(),
+              ),
+              endDrawer: ResponsiveAppBar.isMobile(context)
+                  ? const CustomDrawer()
+                  : null,
+              body: SingleChildScrollView(
+                controller: _scrollController,
+                child: Responsive(
+                  mobile: const Column(children: [MobileAboutScreen()]),
+                  tablet: Container(),
+                  desktop: Column(
+                    children: [
+                      DesktopLandingScreen(key: _landingKey),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 40.0),
+                        child: Divider(
+                          thickness: 0.5,
+                        ),
+                      ), // Assign key to section
+                      DesktopAboutScreen(key: _aboutKey),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 40.0),
+                        child: Divider(
+                          thickness: 0.5,
+                        ),
+                      ), // Assign key to section
+                      // LinksScreen(key: _linksKey),
+                      const DesktopExperience(),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 40.0),
+                        child: Divider(
+                          thickness: 0.5,
+                        ),
+                      ),
+                      const DesktopFooter()
+                      // Assign key to section
+                    ],
                   ),
                 ),
-                const DesktopFooter()
-                // Assign key to section
-              ],
-            ),
-          ),
-        ),
-        floatingActionButton: Visibility(
-          visible: _showButton,
-          child: GestureDetector(
-            onTap: _scrollToTop,
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              margin: const EdgeInsets.only(right: 10),
-              decoration: const BoxDecoration(
-                  shape: BoxShape.circle, color: Colors.white),
-              child: const Icon(
-                Icons.arrow_upward_outlined,
-                color: Colors.black,
+              ),
+              floatingActionButton: Visibility(
+                visible: _showButton,
+                child: GestureDetector(
+                  onTap: _scrollToTop,
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    margin: const EdgeInsets.only(right: 10),
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.white),
+                    child: const Icon(
+                      Icons.arrow_upward_outlined,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
               ),
             ),
-          ),
-        ),
-      ),
-    );
+          );
   }
 }
