@@ -31,7 +31,7 @@ class DesktopAboutScreen extends StatelessWidget {
           Text(
             Strings.aboutMe,
             style: const TextStyle(
-              fontSize: 24,
+              fontSize: 22,
               fontWeight: FontWeight.w100,
               height: 1.5,
               wordSpacing: 1.5,
@@ -41,7 +41,7 @@ class DesktopAboutScreen extends StatelessWidget {
             textScaler: TextScaler.linear(
               ScaleSize.textScaleFactor(
                 context,
-                maxTextScaleFactor: 1.5,
+                maxTextScaleFactor: 1.35,
               ),
             ),
           ),
