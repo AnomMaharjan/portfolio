@@ -75,8 +75,8 @@ class DesktopExperience extends StatelessWidget {
                       borderRadius: BorderRadius.circular(16)),
                   minWidth: 200,
                   onPressed: () {
-                    html.window.open(
-                        "assets/resume/anom_resume.pdf", "anom_resume.pdf");
+                    html.window
+                        .open("assets/anom_resume.pdf", "anom_resume.pdf");
                   },
                   child: Text(
                     "Download Resume",
