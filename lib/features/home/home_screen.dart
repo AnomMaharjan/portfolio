@@ -10,6 +10,7 @@ import 'package:portfolio/features/about/desktop_about_screen.dart';
 import 'package:portfolio/features/about/mobile_about_screen.dart';
 import 'package:portfolio/features/experience/desktop_experience.dart';
 import 'package:portfolio/features/landing/desktop_landing_screen.dart';
+import 'package:portfolio/features/works/desktop_works_screen.dart';
 
 import '../../core/widgets/custom_drawer.dart';
 
@@ -134,29 +135,19 @@ class _HomeScreenState extends State<HomeScreen>
                   desktop: Column(
                     children: [
                       DesktopLandingScreen(key: _landingKey),
-                      const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 40.0),
-                        child: Divider(
-                          thickness: 0.5,
-                        ),
-                      ), // Assign key to section
+                      const CustomDivider(), // Assign key to section
                       DesktopAboutScreen(key: _aboutKey),
-                      const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 40.0),
-                        child: Divider(
-                          thickness: 0.5,
-                        ),
-                      ), // Assign key to section
+                      const CustomDivider(), // Assign key to section
                       // LinksScreen(key: _linksKey),
                       DesktopExperience(
                         key: _experienceKey,
                       ),
-                      const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 40.0),
-                        child: Divider(
-                          thickness: 0.5,
-                        ),
+                      const CustomDivider(),
+                      DesktopWorksScreen(
+                        key: _worksKey,
                       ),
+                      const CustomDivider(),
+
                       const DesktopFooter()
                       // Assign key to section
                     ],
@@ -181,5 +172,19 @@ class _HomeScreenState extends State<HomeScreen>
               ),
             ),
           );
+  }
+}
+
+class CustomDivider extends StatelessWidget {
+  const CustomDivider({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 40.0),
+      child: Divider(
+        thickness: 0.5,
+      ),
+    );
   }
 }

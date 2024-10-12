@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/core/widgets/bebas_neue_text.dart';
+import 'dart:js' as js;
 import '../../core/utils/text_scale_factor.dart';
-import 'dart:html' as html;
 
 class DesktopExperience extends StatelessWidget {
   const DesktopExperience({super.key});
@@ -74,9 +74,10 @@ class DesktopExperience extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16)),
                   minWidth: 200,
-                  onPressed: () {
-                    html.window
-                        .open("assets/anom_resume.pdf", "anom_resume.pdf");
+                  onPressed: () async {
+                    js.context.callMethod('open', [
+                      'https://drive.google.com/file/d/1aquiRYZrHHyb_nCiW9PgvQSWtkxKN4Vd/view?usp=drive_link'
+                    ]);
                   },
                   child: Text(
                     "Download Resume",
