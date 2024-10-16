@@ -60,8 +60,7 @@ class DesktopWorksScreen extends StatelessWidget {
                     "https://apps.apple.com/us/app/ptc-nepal/id1660435059",
               ),
             ],
-          ),
-        ),
+          ),        ),
         const SizedBox(
           height: 40,
         )

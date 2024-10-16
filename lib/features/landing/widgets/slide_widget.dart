@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class SlideWidget extends StatefulWidget {
   final double? width, height;
-
-  const SlideWidget({super.key, this.width, this.height});
+  final BoxFit fit;
+  const SlideWidget({super.key, this.width, this.height, this.fit= BoxFit.fitHeight});
 
   @override
   _SlideWidgetState createState() => _SlideWidgetState();
@@ -47,7 +47,7 @@ class _SlideWidgetState extends State<SlideWidget>
       position: _offsetAnimation!,
       child: Image.asset(
         "assets/cover.png",
-        fit: BoxFit.fitHeight,
+        fit: widget.fit,
         height: widget.height,
       ),
     );

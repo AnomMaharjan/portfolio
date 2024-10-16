@@ -20,14 +20,17 @@ class MobileAppbar extends StatelessWidget implements PreferredSizeWidget {
         style: GoogleFonts.bebasNeue(color: Colors.white, fontSize: 24),
       ),
       actions: [
-        GestureDetector(
-            onTap: () {
-              scaffoldKey.currentState!.openEndDrawer();
-            },
-            child: const Icon(
-              Icons.menu,
-              color: Colors.white,
-            ))
+        Padding(
+          padding: const EdgeInsets.only(right: 16.0),
+          child: GestureDetector(
+              onTap: () {
+                scaffoldKey.currentState!.openEndDrawer();
+              },
+              child: const Icon(
+                Icons.menu,
+                color: Colors.white,
+              )),
+        )
       ],
     );
   }

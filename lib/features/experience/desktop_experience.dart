@@ -134,12 +134,12 @@ class ExperienceCard extends StatelessWidget {
                         style: const TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 16,
+                          fontSize: 14,
                         ),
                         textScaler: TextScaler.linear(
                           ScaleSize.textScaleFactor(
                             context,
-                            maxTextScaleFactor: 1.5,
+                            maxTextScaleFactor: 2,
                           ),
                         ),
                       ),
@@ -151,12 +151,12 @@ class ExperienceCard extends StatelessWidget {
                         style: const TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 13,
+                          fontSize: 12,
                         ),
                         textScaler: TextScaler.linear(
                           ScaleSize.textScaleFactor(
                             context,
-                            maxTextScaleFactor: 1.5,
+                            maxTextScaleFactor: 2,
                           ),
                         ),
                       ),
@@ -165,12 +165,12 @@ class ExperienceCard extends StatelessWidget {
                         style: const TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 13,
+                          fontSize: 12,
                         ),
                         textScaler: TextScaler.linear(
                           ScaleSize.textScaleFactor(
                             context,
-                            maxTextScaleFactor: 1.5,
+                            maxTextScaleFactor: 2,
                           ),
                         ),
                       ),
@@ -179,11 +179,11 @@ class ExperienceCard extends StatelessWidget {
                         child: Text(
                           description,
                           style: const TextStyle(
-                              color: Colors.white, fontSize: 12),
+                              color: Colors.white, fontSize: 10),
                           textScaler: TextScaler.linear(
                             ScaleSize.textScaleFactor(
                               context,
-                              maxTextScaleFactor: 1.5,
+                              maxTextScaleFactor: 2,
                             ),
                           ),
                         ),
@@ -192,12 +192,12 @@ class ExperienceCard extends StatelessWidget {
                         "Key Contributions:",
                         style: const TextStyle(
                             color: Colors.white,
-                            fontSize: 14,
+                            fontSize: 12,
                             fontWeight: FontWeight.bold),
                         textScaler: TextScaler.linear(
                           ScaleSize.textScaleFactor(
                             context,
-                            maxTextScaleFactor: 1.5,
+                            maxTextScaleFactor: 2,
                           ),
                         ),
                       ),
@@ -208,13 +208,13 @@ class ExperienceCard extends StatelessWidget {
                             (element) => Text(
                               "\u2022 $element",
                               style: const TextStyle(
-                                fontSize: 13,
+                                fontSize: 10,
                                 color: Colors.white,
                               ),
                               textScaler: TextScaler.linear(
                                 ScaleSize.textScaleFactor(
                                   context,
-                                  maxTextScaleFactor: 1.5,
+                                  maxTextScaleFactor: 2,
                                 ),
                               ),
                             ),
@@ -251,12 +251,12 @@ class ExperienceCard extends StatelessWidget {
                         style: const TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 16,
+                          fontSize: 14,
                         ),
                         textScaler: TextScaler.linear(
                           ScaleSize.textScaleFactor(
                             context,
-                            maxTextScaleFactor: 1.5,
+                            maxTextScaleFactor: 2,
                           ),
                         ),
                       ),
@@ -268,12 +268,12 @@ class ExperienceCard extends StatelessWidget {
                         style: const TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 16,
+                          fontSize: 14,
                         ),
                         textScaler: TextScaler.linear(
                           ScaleSize.textScaleFactor(
                             context,
-                            maxTextScaleFactor: 1.5,
+                            maxTextScaleFactor: 2,
                           ),
                         ),
                       ),
@@ -282,12 +282,12 @@ class ExperienceCard extends StatelessWidget {
                         style: const TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 13,
+                          fontSize: 12,
                         ),
                         textScaler: TextScaler.linear(
                           ScaleSize.textScaleFactor(
                             context,
-                            maxTextScaleFactor: 1.5,
+                            maxTextScaleFactor: 2,
                           ),
                         ),
                       ),
@@ -296,11 +296,11 @@ class ExperienceCard extends StatelessWidget {
                         child: Text(
                           description,
                           style: const TextStyle(
-                              color: Colors.white, fontSize: 12),
+                              color: Colors.white, fontSize: 10),
                           textScaler: TextScaler.linear(
                             ScaleSize.textScaleFactor(
                               context,
-                              maxTextScaleFactor: 1.5,
+                              maxTextScaleFactor: 2,
                             ),
                           ),
                         ),
@@ -309,12 +309,12 @@ class ExperienceCard extends StatelessWidget {
                         "Key Contributions:",
                         style: const TextStyle(
                             color: Colors.white,
-                            fontSize: 14,
+                            fontSize: 12,
                             fontWeight: FontWeight.bold),
                         textScaler: TextScaler.linear(
                           ScaleSize.textScaleFactor(
                             context,
-                            maxTextScaleFactor: 1.5,
+                            maxTextScaleFactor: 2,
                           ),
                         ),
                       ),
@@ -325,13 +325,13 @@ class ExperienceCard extends StatelessWidget {
                             (element) => Text(
                               "\u2022 $element",
                               style: const TextStyle(
-                                fontSize: 12,
+                                fontSize: 10,
                                 color: Colors.white,
                               ),
                               textScaler: TextScaler.linear(
                                 ScaleSize.textScaleFactor(
                                   context,
-                                  maxTextScaleFactor: 1.5,
+                                  maxTextScaleFactor: 2,
                                 ),
                               ),
                             ),

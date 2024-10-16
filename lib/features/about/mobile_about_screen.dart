@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/core/utils/text_scale_factor.dart';
-import 'package:portfolio/core/widgets/typewriter_text.dart';
-import 'package:portfolio/features/landing/widgets/slide_widget.dart';
+import 'package:portfolio/core/constants/strings.dart';
+import 'package:portfolio/core/widgets/bebas_neue_text.dart';
 
 class MobileAboutScreen extends StatelessWidget {
   const MobileAboutScreen({super.key});
@@ -11,46 +9,27 @@ class MobileAboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(20.0),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Text(
-            "Hi,",
-            style: GoogleFonts.bebasNeue(
-                fontWeight: FontWeight.w100, height: 1, color: Colors.white),
-            textScaler: TextScaler.linear(
-                ScaleSize.textScaleFactor(context, maxTextScaleFactor: 6)),
-          ),
-          Text(
-            "I'm a",
-            style: GoogleFonts.bebasNeue(
-                fontSize: 60,
-                fontWeight: FontWeight.w100,
-                height: 1,
-                color: Colors.white),
-          ),
-          const TypewriterText(
-            texts: ["Software Developer.", "Freelancer."],
-            textSize: 60,
+          const BebasneueText(
+            text: "About Me",
+            fontSize: 40,
+            maxTextScaleFactor: 2,
           ),
           const SizedBox(
-            height: 20,
+            height: 40,
           ),
           Text(
-            "Flutter developer with 3+ years of experience crafting high-quality, cross-platform mobile apps for Android and iOS. Proficient in Dart, state management (Bloc, Provider), API integration, and creating intuitive UI/UX designs. Known for writing clean, efficient code and collaborating effectively with teams to deliver user-focused solutions. Passionate about utilizing cutting-edge technologies to build seamless, visually engaging mobile experiences.",
+            Strings.aboutMe,
             style: GoogleFonts.bebasNeue(
                 fontSize: 20,
                 fontWeight: FontWeight.w100,
                 height: 1,
                 color: Colors.white),
           ),
-          Center(
-            child: SlideWidget(
-              width: MediaQuery.of(context).size.width * 0.65,
-            ),
-          )
         ],
       ),
     );

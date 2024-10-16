@@ -9,10 +9,13 @@ import 'package:portfolio/core/widgets/footer/desktop_footer.dart';
 import 'package:portfolio/features/about/desktop_about_screen.dart';
 import 'package:portfolio/features/about/mobile_about_screen.dart';
 import 'package:portfolio/features/experience/desktop_experience.dart';
+import 'package:portfolio/features/home/layouts/home_layout.dart';
+import 'package:portfolio/features/home/layouts/mobile_layout.dart';
 import 'package:portfolio/features/landing/desktop_landing_screen.dart';
 import 'package:portfolio/features/works/desktop_works_screen.dart';
 
 import '../../core/widgets/custom_drawer.dart';
+import '../landing/mobile_landing_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -130,29 +133,17 @@ class _HomeScreenState extends State<HomeScreen>
               body: SingleChildScrollView(
                 controller: _scrollController,
                 child: Responsive(
-                  mobile: const Column(children: [MobileAboutScreen()]),
-                  tablet: Container(),
-                  desktop: Column(
-                    children: [
-                      DesktopLandingScreen(key: _landingKey),
-                      const CustomDivider(), // Assign key to section
-                      DesktopAboutScreen(key: _aboutKey),
-                      const CustomDivider(), // Assign key to section
-                      // LinksScreen(key: _linksKey),
-                      DesktopExperience(
-                        key: _experienceKey,
-                      ),
-                      const CustomDivider(),
-                      DesktopWorksScreen(
-                        key: _worksKey,
-                      ),
-                      const CustomDivider(),
-
-                      const DesktopFooter()
-                      // Assign key to section
-                    ],
-                  ),
-                ),
+                    mobile: MobileLayout(
+                        aboutKey: _aboutKey,
+                        experienceKey: _experienceKey,
+                        landingKey: _landingKey,
+                        workKey: _worksKey),
+                    tablet: Container(),
+                    desktop: HomeLayout(
+                        aboutKey: _aboutKey,
+                        experienceKey: _experienceKey,
+                        landingKey: _landingKey,
+                        workKey: _worksKey)),
               ),
               floatingActionButton: Visibility(
                 visible: _showButton,
@@ -176,13 +167,14 @@ class _HomeScreenState extends State<HomeScreen>
 }
 
 class CustomDivider extends StatelessWidget {
-  const CustomDivider({super.key});
+  final double paddingWidth;
+  const CustomDivider({super.key, this.paddingWidth = 40});
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 40.0),
-      child: Divider(
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: paddingWidth),
+      child: const Divider(
         thickness: 0.5,
       ),
     );
